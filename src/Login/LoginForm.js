@@ -1,12 +1,17 @@
 import React,{useState} from 'react';
+
+import Password from './Password.js';
+
+
 let loginForm = {
   id: 'abcd',
   passwd: '1234',
   message: 'SUCCESS',
 };
+
 function LoginForm() {
 
-  const [loginForm, setLoginForm] = useState({})
+  const [loginForm, setLoginForm] = useState({id:"",passwd:""})
 
   return (
     <>
@@ -18,12 +23,7 @@ function LoginForm() {
         onChange={}
         id="inputId"></input>
       </div>
-      <label for="inputPasswd" style={{ margin: '5px' }}>
-        비밀번호
-      </label>
-      <input 
-      onChange={}
-      id="inputPasswd"></input>
+      <Password onChange={}></Password>
       <button 
       onChange={}
       style={{ margin: '5px' }}>login</button>
