@@ -4,9 +4,9 @@ let loginForm = {
   passwd: '1234',
   message: 'SUCCESS',
 };
-function Login() {
+function LoginForm() {
 
-  const [login, setLogin] = useState({})
+  const [loginForm, setLoginForm] = useState({})
 
   return (
     <>
@@ -31,4 +31,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginForm;
