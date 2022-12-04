@@ -1,10 +1,14 @@
 import { atom } from 'recoil';
+import { recoilPersist } from 'recoil-persist';
+
+const { persistAtom } = recoilPersist();
 
 export const inputLoginId = atom({
   key: 'inputLoginId',
   default: {
     userId: '',
   },
+  effects: [persistAtom],
 });
 
 export const inputLoginPwd = atom({
