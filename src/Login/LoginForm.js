@@ -13,22 +13,26 @@ function LoginForm() {
   const [loginDataCoil, setLoginDataCoil] = useRecoilState(loginData);
 
   return (
-    <>
-      <LoginId></LoginId>
-      <Password></Password>
-      <button
-        onClick={() => {
-          setLoginForm({
-            userId: userIdCoil.userId,
-            userPwd: userPwdCoil.userPwd,
-          });
-          clickLoginButton(loginForm);
-        }}
-        style={{ margin: '5px' }}
-      >
-        login
-      </button>
-    </>
+    <form action="">
+      <fieldset>
+        <legend>로그인</legend>
+        <LoginId></LoginId>
+        <Password></Password>
+        <button
+          type="submit"
+          onClick={() => {
+            setLoginForm({
+              userId: userIdCoil.userId,
+              userPwd: userPwdCoil.userPwd,
+            });
+            clickLoginButton(loginForm);
+          }}
+          style={{ margin: '5px' }}
+        >
+          login
+        </button>
+      </fieldset>
+    </form>
   );
 }
 

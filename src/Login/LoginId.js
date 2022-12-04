@@ -12,6 +12,7 @@ function LoginId() {
         아이디
       </label>
       <input
+        name="inputId"
         onChange={(e) => {
           changeId(e.target.value, userIdCoil, setUserIdCoil);
           console.log(userIdCoil);
