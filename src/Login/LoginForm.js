@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Password from './Password';
+import LoginPwd from './LoginPwd';
 import LoginId from './LoginId';
 import { clickLoginButton } from './ChangeForm';
 import { loginData, inputLoginId, inputLoginPwd } from '../Recoil/loginState';
@@ -13,11 +13,11 @@ function LoginForm() {
   const [loginDataCoil, setLoginDataCoil] = useRecoilState(loginData);
 
   return (
-    <form >
+    <form>
       <fieldset>
         <legend>로그인</legend>
         <LoginId></LoginId>
-        <Password></Password>
+        <LoginPwd></LoginPwd>
         <button
           type="submit"
           onClick={() => {
