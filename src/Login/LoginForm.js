@@ -11,7 +11,6 @@ function LoginForm() {
   const [loginForm, setLoginForm] = useState({ userId: '', userPwd: '' });
   const [userIdCoil, setUserIdCoil] = useRecoilState(inputLoginId);
   const [userPwdCoil, setUserPwdCoil] = useRecoilState(inputLoginPwd);
-  const [loginDataCoil, setLoginDataCoil] = useRecoilState(loginData);
 
   const navigate = useNavigate();
 
