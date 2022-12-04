@@ -5,6 +5,7 @@ import LoginId from './LoginId';
 import { clickLoginButton } from './ChangeForm';
 import { loginData, inputLoginId, inputLoginPwd } from '../Recoil/loginState';
 import { useRecoilState } from 'recoil';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [loginForm, setLoginForm] = useState({ userId: '', userPwd: '' });
@@ -12,8 +13,14 @@ function LoginForm() {
   const [userPwdCoil, setUserPwdCoil] = useRecoilState(inputLoginPwd);
   const [loginDataCoil, setLoginDataCoil] = useRecoilState(loginData);
 
+  const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate('/');
+  };
+
   return (
-    <form>
+    <form action="" method="post" onSubmit={navigateToHome}>
       <fieldset>
         <legend>로그인</legend>
         <LoginId></LoginId>
