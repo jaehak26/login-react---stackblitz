@@ -6,20 +6,18 @@ import Password from './Login/Password.js';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 
 export default function App() {
-
   const navigate = useNavigate();
 
   const navigateToLogin = () => {
-    navigate("/login");
+    navigate('/login');
   };
 
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
       <p>Start editing to see some magic happen :)</p>
-      <Button onclick={}>Login</Button>
+      <Button onClick={navigateToLogin}>Login</Button>
       <LoginForm></LoginForm>
-      
     </div>
   );
 }
