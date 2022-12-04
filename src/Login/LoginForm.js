@@ -13,7 +13,7 @@ function LoginForm() {
   const [loginDataCoil, setLoginDataCoil] = useRecoilState(loginData);
 
   return (
-    <form action="">
+    <form >
       <fieldset>
         <legend>로그인</legend>
         <LoginId></LoginId>
