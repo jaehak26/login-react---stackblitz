@@ -8,7 +8,6 @@ export const inputLoginId = atom({
   default: {
     userId: '',
   },
-
 });
 
 export const inputLoginPwd = atom({
@@ -20,9 +19,11 @@ export const inputLoginPwd = atom({
 
 export const loginData = atom({
   key: 'loginData',
-  default: {
-    userId: '',
-    userPwd: '',
-    message: 'FAILED',
-  },
+  default: { userId: '', userPwd: '', message: 'FAILED' },
+});
+
+export const loginMessage = atom({
+  key: 'loginMessage',
+  default: { userId: '', message: 'FAILED' },
+  effects: [persistAtom],
 });
