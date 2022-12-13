@@ -17,47 +17,46 @@ function LoginForm() {
 
   const navigate = useNavigate();
 
-  const navigateToHome = () => {
+  const userExist = () => {
     setUserExist(clickLoginButton(loginForm));
-    console.log(isUserExist);
+
     if (isUserExist == 'false') {
       alert('잘못된 아이디 혹은 비밀번호입니다.');
-      return false;
     }
-    return true;
   };
-  return (
-    <form action="" method="" onSubmit={navigateToHome}>
-      <fieldset style={{ maxWidth: '350px' }}>
-        <legend>로그인</legend>
-        <div>
-          <label for="inputId" style={{ margin: '13px' }}>
-            아이디
-          </label>
-          <input
-            name="inputId"
-            onChange={(e) => {
-              setLoginForm({ ...loginForm, userId: e.target.value });
-            }}
-            id="inputId"
-          ></input>
-        </div>
-        <label for="inputPwd" style={{ margin: '5px' }}>
-          비밀번호
-        </label>
-        <input
-          name="inputPwd"
-          onChange={(e) => {
-            setLoginForm({ ...loginForm, userPwd: e.target.value });
-          }}
-          id="inputPwd"
-        ></input>
 
-        <button type="submit" style={{ margin: '5px' }}>
-          login
-        </button>
-      </fieldset>
-    </form>
+  const navigateToHome = () => {
+    if (isUserExist == 'true') {
+      navigate('/');
+    }
+  };
+
+  return (
+    <fieldset style={{ maxWidth: '350px' }}>
+      <legend>로그인</legend>
+      <div>
+        <label style={{ margin: '13px' }}>아이디</label>
+        <input
+          name="inputId"
+          onChange={(e) => {
+            setLoginForm({ ...loginForm, userId: e.target.value });
+          }}
+          id="inputId"
+        ></input>
+      </div>
+      <label style={{ margin: '5px' }}>비밀번호</label>
+      <input
+        name="inputPwd"
+        onChange={(e) => {
+          setLoginForm({ ...loginForm, userPwd: e.target.value });
+        }}
+        id="inputPwd"
+      ></input>
+
+      <button style={{ margin: '5px' }} onClick={userExist}>
+        login
+      </button>
+    </fieldset>
   );
 }
 

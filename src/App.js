@@ -15,9 +15,7 @@ export default function App() {
     navigate('/login');
   };
 
-  useEffect(() => {
-    console.log(userIdCoil);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
