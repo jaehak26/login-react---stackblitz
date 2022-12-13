@@ -22,9 +22,9 @@ function LoginForm() {
     console.log(isUserExist);
     if (isUserExist == 'false') {
       alert('잘못된 아이디 혹은 비밀번호입니다.');
-      navigate('/login');
+      return false;
     }
-    navigate('/');
+    return true;
   };
   return (
     <form action="" method="post" onSubmit={navigateToHome}>
