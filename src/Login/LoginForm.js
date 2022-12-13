@@ -27,7 +27,7 @@ function LoginForm() {
     return true;
   };
   return (
-    <form action="" method="post" onSubmit={navigateToHome}>
+    <form action="" method="" onSubmit={navigateToHome}>
       <fieldset style={{ maxWidth: '350px' }}>
         <legend>로그인</legend>
         <div>
