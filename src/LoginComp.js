@@ -1,13 +1,10 @@
 import React, { useEffect } from 'react';
 import './style.css';
-import LoginForm from './Login/LoginForm';
 import { Button } from '@mui/material';
-import Password from './Login/Password.js';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { loginData, inputLoginId, inputLoginPwd } from './Recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { loginMessage } from './Recoil/loginState';
-import { useRecoilState } from 'recoil';
 
 export default function LoginComp() {
   const [userIdCoil, setUserIdCoil] = useRecoilState(inputLoginId);
