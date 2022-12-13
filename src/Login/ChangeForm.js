@@ -1,7 +1,7 @@
-let loginForm = {
+let loginData = {
   id: 'abcd',
   passwd: '1234',
-  message: 'SUCCESS',
+  isUserExist: 'true',
 };
 
 export function changePwd(pwd, loginForm, setLoginForm) {
@@ -15,4 +15,14 @@ export function changeId(id, loginForm, setLoginForm) {
 export function clickLoginButton(loginForm) {
   //서버로 값을 보내어 db의 내용과 값을 비교함.
   console.log(loginForm);
+  console.log(
+    loginForm.userId == loginData.id && loginForm.userPwd == loginData.passwd
+  );
+  if (
+    loginForm.userId == loginData.id &&
+    loginForm.userPwd == loginData.passwd
+  ) {
+    return 'true';
+  }
+  return 'false';
 }
