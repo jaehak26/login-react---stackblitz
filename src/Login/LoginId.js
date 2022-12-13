@@ -15,7 +15,7 @@ function LoginId() {
         name="inputId"
         onChange={(e) => {
           changeId(e.target.value, userIdCoil, setUserIdCoil);
-          console.log(userIdCoil);
+          //console.log(userIdCoil);
         }}
         id="inputId"
       ></input>

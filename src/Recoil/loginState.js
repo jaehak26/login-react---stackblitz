@@ -8,7 +8,7 @@ export const inputLoginId = atom({
   default: {
     userId: '',
   },
-  effects: [persistAtom],
+
 });
 
 export const inputLoginPwd = atom({

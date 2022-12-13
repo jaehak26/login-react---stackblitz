@@ -17,7 +17,6 @@ function LoginForm() {
   const navigateToHome = () => {
     navigate('/');
   };
-
   return (
     <form action="" method="post" onSubmit={navigateToHome}>
       <fieldset>
