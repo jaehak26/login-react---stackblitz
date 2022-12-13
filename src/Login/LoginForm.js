@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import LoginPwd from './LoginPwd';
 import LoginId from './LoginId';
@@ -18,9 +18,7 @@ function LoginForm() {
   const navigate = useNavigate();
 
   const userExist = () => {
-    setUserExist(clickLoginButton(loginForm));
-
-    if (isUserExist == 'false') {
+    if (clickLoginButton(loginForm) == 'false') {
       alert('잘못된 아이디 혹은 비밀번호입니다.');
     }
   };
