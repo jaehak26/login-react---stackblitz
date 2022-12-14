@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import { loginData, inputLoginId, inputLoginPwd } from './Recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { loginMessage } from './Recoil/loginState';
+import {use} from './Login/useAsync'
 
 export default function LoginComp() {
   const [userIdCoil, setUserIdCoil] = useRecoilState(inputLoginId);

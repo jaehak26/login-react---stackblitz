@@ -4,14 +4,25 @@ import { clickLoginButton } from './ChangeForm';
 import { loginMessage } from '../Recoil/loginState';
 import { useRecoilState } from 'recoil';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { useAsync } from './useAsync';
+
+async function getUser() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users');
+  res = response.json();
+  return res;
+}
 
 function LoginForm() {
   const [loginForm, setLoginForm] = useState({ userId: '', userPwd: '' });
   const [loginMessageCoil, setLoginMessageCoil] = useRecoilState(loginMessage);
+  //const [state, refetch] = useAsync(getUser, [], true);
+
+  //const { loading, data: user, error } = state;
+
   const navigate = useNavigate();
 
   const userExist = () => {
-    if (clickLoginButton(loginForm) == 'true') {
+    if (user[0].userName == loginForm.userId) {
       setLoginMessageCoil({
         ...loginMessageCoil,
         userId: loginForm.userId,
